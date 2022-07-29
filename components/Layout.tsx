@@ -35,13 +35,13 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         <header>
           <nav>
             <Link href="/">
-              <a>Dashboard</a>
+              <a>Orçado x Realizado</a>
             </Link>
             <br />
             <br />
 
-            <Link href="/about">
-              <a>Orçado x Realizado</a>
+            <Link href="/dashboard">
+              <a>Dashboard</a>
             </Link>
           </nav>
         </header>

@@ -1,7 +1,5 @@
 import {
   Box,
-  ChakraProvider,
-  Container,
   Divider,
   Flex,
   Stack,
@@ -13,10 +11,9 @@ import {
   Tfoot,
   Th,
   Thead,
-  theme,
   Tr,
 } from '@chakra-ui/react';
-import Link from 'next/link';
+
 import Layout from '../components/Layout';
 
 const IndexPage = () => (

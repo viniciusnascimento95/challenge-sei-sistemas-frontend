@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, Stack, Text } from '@chakra-ui/react';
 import Layout from '../components/Layout';
 
-const AboutPage = () => (
+const DashboradPage = () => (
   <Layout title="Dashboard | SEI Sistemas">
     <Flex color="white">
       <Box flex="1" color="black" p={3} borderWidth="2px" borderRadius="lg">
@@ -14,4 +14,4 @@ const AboutPage = () => (
   </Layout>
 );
 
-export default AboutPage;
+export default DashboradPage;
