@@ -13,10 +13,18 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
-
+import { GetStaticProps } from 'next';
 import Layout from '../components/Layout';
 
-const IndexPage = () => (
+type ResponseProps = {
+  id: string;
+  nome: string
+  valor_real: number;
+  valor_orc: number;
+}
+
+export default function IndexPage ({results}) {  
+  return (
   <Layout title="Tela de Orçado x Realizado | SEI Sistemas">
     <Flex color="white">
       <Box flex="1" color="black" p={3} borderWidth="2px" borderRadius="lg">
@@ -30,46 +38,45 @@ const IndexPage = () => (
               <Tr>
                 <Th>N°</Th>
                 <Th>Conta</Th>
-                <Th>Real</Th>
-                <Th>Orçado</Th>
+                <Th isNumeric>Real</Th>
+                <Th isNumeric>Orçado</Th>
                 <Th>Variação (%)</Th>
                 <Th>Variação (R$)</Th>
               </Tr>
             </Thead>
-            <Tbody>
-              <Tr>
-                <Td>1</Td>
-                <Td>Salário</Td>
-                <Td>25.4</Td>
-                <Td>50.4</Td>
-                <Td>%50</Td>
-                <Td>100.4</Td>
-              </Tr>
-              <Tr>
-                <Td>2</Td>
-                <Td>Horas extras</Td>
-                <Td>25.4</Td>
-                <Td>50.4</Td>
-                <Td>%20</Td>
-                <Td>100.4</Td>
-              </Tr>
-              <Tr>
-                <Td>3</Td>
-                <Td>Recições</Td>
-                <Td>25.4</Td>
-                <Td>50.4</Td>
-                <Td>%70</Td>
-                <Td>100.4</Td>
-              </Tr>
+            <Tbody> 
+
+            {results.map((item, index) => (
+                <Tr key={index}>
+                 <Td>{item.id}</Td>
+                 <Td>{item.nome}</Td>                
+                 <Td isNumeric> {new Intl.NumberFormat('pt-BR', {
+                        style: 'currency',
+                        currency: 'BRL'
+                    }).format(item.valor_real)}</Td>
+                 <Td isNumeric>{new Intl.NumberFormat('pt-BR', {
+                        style: 'currency',
+                        currency: 'BRL'
+                    }).format(item.valor_orc)}</Td>
+                 <Td>%</Td>
+                 <Td>
+                 {new Intl.NumberFormat('pt-BR', {
+                        style: 'currency',
+                        currency: 'BRL'
+                    }).format((item.valor_real - item.valor_orc))}</Td>
+               </Tr>
+                )
+              )}              
+              
             </Tbody>
             <Tfoot>
               <Tr>
                 <Th></Th>
                 <Th>Total:</Th>
-                <Th>R$: 123.00 </Th>
-                <Th>R$: 323.00</Th>
-                <Th>% 110.0</Th>
-                <Th>R$: 31231.12</Th>
+                <Th>R$: 0 </Th>
+                <Th>R$: 0</Th>
+                <Th>% 0</Th>
+                <Th>R$: 0</Th>
               </Tr>
             </Tfoot>
           </Table>
@@ -77,23 +84,22 @@ const IndexPage = () => (
       </Box>
     </Flex>
   </Layout>
-);
+  );
+}
 
-export default IndexPage;
+export const getStaticProps : GetStaticProps = async () => {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const res = await fetch('http://localhost:3000/api/dashboard')
+  const data = await res.json()
 
-{
-  /* <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="10vmin" pointerEvents="none" />
-          <Container maxW="5xl">
-            <FormCep />
-            <TableAndress />
-          </Container>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider> */
+  // console.log(data.results);
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      results: data.results,
+    },
+  }
 }
