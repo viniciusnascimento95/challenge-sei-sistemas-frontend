@@ -1,9 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import mysql from 'mysql2/promise'
 
-
-// http://localhost:3000/api/dashboard
-export default async function handler (_req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   const dbconnection = await mysql.createConnection({
     host: 'localhost',
@@ -17,10 +15,7 @@ export default async function handler (_req: NextApiRequest, res: NextApiRespons
     const values = []
     const [data] = await dbconnection.execute(query, values);
     dbconnection.end();
-
-    // console.log(data);
-
-    res.status(200).json({results: data})
+    res.status(200).json({ results: data })
   } catch (err: any) {
     res.status(500).json({ statusCode: 500, message: err.message })
   }

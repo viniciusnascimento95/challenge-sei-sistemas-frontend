@@ -47,7 +47,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
           </List>
         </Box>
       </GridItem>
-      <GridItem pl="2" m={2} area={'main'}>
+      <GridItem pl="2" m={2} area={'main'} h="90vh">
         {children}
       </GridItem>
     </Grid>

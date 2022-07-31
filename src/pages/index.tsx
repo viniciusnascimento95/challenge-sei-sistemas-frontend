@@ -57,7 +57,6 @@ export default function IndexPage({ results }: Props) {
                   </Tr>
                 )
                 )}
-
               </Tbody>
               <Tfoot>
                 <Tr>
@@ -66,7 +65,7 @@ export default function IndexPage({ results }: Props) {
                   <Th isNumeric>{getTotReal(results)}</Th>
                   <Th isNumeric>{getTotOrc(results)}</Th>
                   <Th isNumeric></Th>
-                  <Th isNumeric>{getTotVariationRS(results)}</Th>
+                  <Th isNumeric color={getTotVariationRS(results).includes('-') ? "red" : "green"}>{getTotVariationRS(results)}</Th>
                 </Tr>
               </Tfoot>
             </Table>
