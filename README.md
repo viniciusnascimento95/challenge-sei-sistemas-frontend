@@ -18,9 +18,9 @@
   - [x] A coluna "Variacão (R$)" deve ter o valor na cor verde para valores positivos, e vermelhos para valores negativos.
   - [x] O layout deve seguir o exemplo abaixo
 
-- [ ] FE02 – Gráfico de Orçado x Realizado
-  - [ ] Gráfico de barra exibindo o comparativo visual entre os valores orçados x realizados
-  - [ ] O eixo X deve exibir as Contas, o eixo Y deve exibir os valores somados por conta
+- [x] FE02 – Gráfico de Orçado x Realizado
+  - [x] Gráfico de barra exibindo o comparativo visual entre os valores orçados x realizados
+  - [x] O eixo X deve exibir as Contas, o eixo Y deve exibir os valores somados por conta
   - [x] Cada barra deve representar a Conta com o somatório dos valores orçados para aquela conta sobre o somatório dos valores realizados para a mesma conta
   - [x] O layout deve seguir o exemplo abaixo
   - [x] A aplicacão deve ser web utilizando React
