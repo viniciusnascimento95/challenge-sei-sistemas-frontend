@@ -21,12 +21,12 @@
 - [ ] FE02 – Gráfico de Orçado x Realizado
   - [ ] Gráfico de barra exibindo o comparativo visual entre os valores orçados x realizados
   - [ ] O eixo X deve exibir as Contas, o eixo Y deve exibir os valores somados por conta
-  - [ ] Cada barra deve representar a Conta com o somatório dos valores orçados para aquela conta sobre o somatório dos valores realizados para a mesma conta
-  - [ ] O layout deve seguir o exemplo abaixo
+  - [x] Cada barra deve representar a Conta com o somatório dos valores orçados para aquela conta sobre o somatório dos valores realizados para a mesma conta
+  - [x] O layout deve seguir o exemplo abaixo
   - [x] A aplicacão deve ser web utilizando React
-  - [ ] Deve utilizar o banco de dados MySql. Banco Cliente.mwb
-  - [ ] Deve seguir o layout dos exemplos, não sendo necessário seguir o padrão de cores
-  - [ ] Os componentes Grid e Gráfico podem ser de livre escolha
+  - [x] Deve utilizar o banco de dados MySql. Banco Cliente.mwb
+  - [x] Deve seguir o layout dos exemplos, não sendo necessário seguir o padrão de cores
+  - [x] Os componentes Grid e Gráfico podem ser de livre escolha
 
 # TypeScript Next.js example
 
