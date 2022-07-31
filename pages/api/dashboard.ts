@@ -18,7 +18,7 @@ export default async function handler (_req: NextApiRequest, res: NextApiRespons
     const [data] = await dbconnection.execute(query, values);
     dbconnection.end();
 
-    console.log(data);
+    // console.log(data);
 
     res.status(200).json({results: data})
   } catch (err: any) {

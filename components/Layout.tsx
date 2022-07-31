@@ -1,7 +1,9 @@
 import React, { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import { ChakraProvider, Grid, GridItem, theme } from '@chakra-ui/react';
+import { Box, ChakraProvider, Grid, GridItem, List, ListItem, Text, theme } from '@chakra-ui/react';
+import { LinkIcon } from '@chakra-ui/icons';
+
 
 type Props = {
   children?: ReactNode;
@@ -15,9 +17,9 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
                   "nav main"
                   "nav footer"`}
       gridTemplateRows={'50px 1fr 30px'}
-      gridTemplateColumns={'150px 1fr'}
+      gridTemplateColumns={'230px 1fr'}
       h="200px"
-      gap="1"
+      // gap="1"
       color="blackAlpha.700"
       fontWeight="bold"
     >
@@ -30,21 +32,20 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
+        <Text color="white" pt={3}>{title}</Text>
       </GridItem>
       <GridItem pl="2" bg="blue.500" area={'nav'}>
-        <header>
-          <nav>
-            <Link href="/">
-              <a>Orçado x Realizado</a>
-            </Link>
-            <br />
-            <br />
-
-            <Link href="/dashboard">
-              <a>Dashboard</a>
-            </Link>
-          </nav>
-        </header>
+        <Box h='100%' p={4} color='white'>
+          <List spacing={3}>
+            <ListItem>
+              <Link href="/" color='teal.500'>
+                <a> <LinkIcon /> Orçado x Realizado</a>
+              </Link></ListItem>
+            <ListItem><Link href="/dashboard">
+              <a><LinkIcon /> Dashboard</a>
+            </Link></ListItem>
+          </List>
+        </Box>
       </GridItem>
       <GridItem pl="2" m={2} area={'main'}>
         {children}

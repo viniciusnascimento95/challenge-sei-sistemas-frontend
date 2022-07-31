@@ -8,3 +8,14 @@ export type User = {
   id: number
   name: string
 }
+
+export type DatabaseMysql = {
+  id: number
+  nome: string
+  valor_real: number;
+  valor_orc: number
+}
+
+export const LabelsDashboard = [
+  'Salários', 'Horas Extras', 'Rescisões', 'Encargos Trabalhistas', 'Férias', '13 Salário', 'Benefícios', 'Descontos e Repasses', 'Cursos e Treinamentos', 'Promocao e Evento'
+];

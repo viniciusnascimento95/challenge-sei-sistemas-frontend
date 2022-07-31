@@ -4,19 +4,19 @@
 - [x] install dependencies from
       chakra ui
 - [x] Config routes app
-- [ ] Styled project
-- [ ] Config connection for get data to use project
+- [x] Styled project
+- [x] Config connection for get data to use project
 
 ## REQUISITOS
 
 - [x] FE01 - Tela de Orçado x Realizado
 
-  - [ ] "Orcado x Realizado" - Grid contento o relatório comparativo entre valores orçados (previstos) e realizados (gastos). Obs. Os valores estão armazenados no banco MySql Cliente.mwb anexo ao projeto.
+  - [x] "Orcado x Realizado" - Grid contento o relatório comparativo entre valores orçados (previstos) e realizados (gastos). Obs. Os valores estão armazenados no banco MySql Cliente.mwb anexo ao projeto.
   - [ ] Paginação de 10 itens
-  - [ ] Mostrador de total de itens
-  - [ ] O relatório deve exibir as colunas (No, Conta, Real, Orcado, Variação (%), Variação (R$)) No – Coluna id_Conta tabela tb_Orcamentos Conta – Coluna Conta tabela tb_Conta Real – Somatório da coluna vlr_real tabela tb_Orcamentos para Conta  Orcado – Somatório da coluna vlr_orcado tabela tb_Orcamentos para Conta  Variacao (%) – Porcentagem da diferença entre o somatório dos valores reais e valores orçados Variacão (R$) – Diferença entre o somatório dos valores reais e valores orçados
-
-  - [ ] A coluna "Variacão (R$)" deve ter o valor na cor verde para valores positivos, e vermelhos para valores negativos. - [ ] O layout deve seguir o exemplo abaixo
+  - [x] Mostrador de total de itens
+  - [x] O relatório deve exibir as colunas (No, Conta, Real, Orcado, Variação (%), Variação (R$)) No – Coluna id_Conta tabela tb_Orcamentos Conta – Coluna Conta tabela tb_Conta Real – Somatório da coluna vlr_real tabela tb_Orcamentos para Conta  Orcado – Somatório da coluna vlr_orcado tabela tb_Orcamentos para Conta  Variacao (%) – Porcentagem da diferença entre o somatório dos valores reais e valores orçados Variacão (R$) – Diferença entre o somatório dos valores reais e valores orçados
+  - [x] A coluna "Variacão (R$)" deve ter o valor na cor verde para valores positivos, e vermelhos para valores negativos.
+  - [x] O layout deve seguir o exemplo abaixo
 
 - [ ] FE02 – Gráfico de Orçado x Realizado
   - [ ] Gráfico de barra exibindo o comparativo visual entre os valores orçados x realizados
