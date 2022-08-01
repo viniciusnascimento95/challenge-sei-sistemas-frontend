@@ -1,8 +1,52 @@
+## Screenshots app frontend
+
+#### Page Home
+![Screenshot](./screenshots/1.orcVsreal.png)
+#### Page Dashboard
+![Screenshot](./screenshots/2.dashboard.png)
+
+
+## Tech Stack
+
+**Client:** React, Nextjs, Chakra UI
+
+
+## Installation
+
+Clone the project
+
+```bash
+  git clone https://github.com/viniciusnascimento95/challenge-sei-sistemas-frontend.git
+
+  cd challenge-sei-sistemas-frontend
+```
+
+Install dependencies NPM
+
+```bash
+  npm install
+```
+
+## Docker
+
+Start database MYSQL
+
+```bash
+  docker-compose up
+```
+*Importar banco de dados para executar projeto*
+
+
+Start web server Local: http://localhost:3000
+
+```bash
+  npm run dev
+```
+
 ### Challenge developer frontend
 
 - [x] start project in nextjs
-- [x] install dependencies from
-      chakra ui
+- [x] install dependencies from chakra ui
 - [x] Config routes app
 - [x] Styled project
 - [x] Config connection for get data to use project
@@ -10,7 +54,6 @@
 ## REQUISITOS
 
 - [x] FE01 - Tela de Orçado x Realizado
-
   - [x] "Orcado x Realizado" - Grid contento o relatório comparativo entre valores orçados (previstos) e realizados (gastos). Obs. Os valores estão armazenados no banco MySql Cliente.mwb anexo ao projeto.
   - [ ] Paginação de 10 itens
   - [x] Mostrador de total de itens
@@ -28,50 +71,8 @@
   - [x] Deve seguir o layout dos exemplos, não sendo necessário seguir o padrão de cores
   - [x] Os componentes Grid e Gráfico podem ser de livre escolha
 
-# TypeScript Next.js example
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## Authors
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-```
-
-```bash
-yarn create next-app --example with-typescript with-typescript-app
-```
-
-```bash
-pnpm create next-app --example with-typescript with-typescript-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+[@viniciusnascimento95](https://www.github.com/viniciusnascimento95)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vin%C3%ADcius-nascimento-027507159/)

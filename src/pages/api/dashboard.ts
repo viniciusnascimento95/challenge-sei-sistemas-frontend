@@ -4,12 +4,13 @@ import mysql from 'mysql2/promise'
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   const dbconnection = await mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
     port: 3306,
-    password: 'password',
-    database: 'dev'
+    password: process.env.DB_PASS,
+    database: process.env.DB_DATABASE
   });
+
   try {
     const query = "SELECT c.id, c.nome , sum(o.vlr_real) as valor_real , sum(o.vlr_orcado) as valor_orc FROM tb_Conta as c left join tb_Orcamentos as o on c.id = o.id_Conta group by c.id;"
     const values = []
