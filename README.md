@@ -12,6 +12,8 @@
 
 **Client:** React, Nextjs, Chakra UI
 
+**Server:** Docker, Mysql, NPM
+
 ## Installation
 
 Clone the project
