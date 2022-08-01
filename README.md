@@ -1,15 +1,16 @@
 ## Screenshots app frontend
 
 #### Page Home
-![Screenshot](./screenshots/1.orcVsreal.png)
-#### Page Dashboard
-![Screenshot](./screenshots/2.dashboard.png)
 
+![Screenshot](./screenshots/1.orcVsreal.png)
+
+#### Page Dashboard
+
+![Screenshot](./screenshots/2.dashboard.png)
 
 ## Tech Stack
 
 **Client:** React, Nextjs, Chakra UI
-
 
 ## Installation
 
@@ -34,8 +35,8 @@ Start database MYSQL
 ```bash
   docker-compose up
 ```
-*Importar banco de dados para executar projeto*
 
+_Importar banco de dados para executar projeto (/database/frontend.sql)_
 
 Start web server Local: http://localhost:3000
 
@@ -54,6 +55,7 @@ Start web server Local: http://localhost:3000
 ## REQUISITOS
 
 - [x] FE01 - Tela de Orçado x Realizado
+
   - [x] "Orcado x Realizado" - Grid contento o relatório comparativo entre valores orçados (previstos) e realizados (gastos). Obs. Os valores estão armazenados no banco MySql Cliente.mwb anexo ao projeto.
   - [ ] Paginação de 10 itens
   - [x] Mostrador de total de itens
@@ -70,7 +72,6 @@ Start web server Local: http://localhost:3000
   - [x] Deve utilizar o banco de dados MySql. Banco Cliente.mwb
   - [x] Deve seguir o layout dos exemplos, não sendo necessário seguir o padrão de cores
   - [x] Os componentes Grid e Gráfico podem ser de livre escolha
-
 
 ## Authors
 
