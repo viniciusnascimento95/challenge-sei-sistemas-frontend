@@ -1,3 +1,7 @@
+### React icons
+
+- [Documentation icons react](https://react-icons.github.io/react-icons)
+
 ## Screenshots app frontend
 
 #### Page Home
